@@ -1,0 +1,8 @@
+name: First Workflow  # workflow name
+on: push  # when push events are happend it will run this workflow
+jobs:
+  firstJob:    # jon name
+    runs-on: ubuntu-latest # windows-latest, macos-latest
+    steps: 
+      - name: greet    # name of instruction
+        run: echo "hello world"  # instruction to execute
