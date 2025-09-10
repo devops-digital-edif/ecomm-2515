@@ -1,0 +1,11 @@
+name: Manual Trigger
+on: workflow_dispatch    # manual trigger
+jobs:
+  testJob:
+    runs-on: windows-latest  # ubuntu-latest, macos-latest
+    steps:
+      - name: greet
+        run: echo "welcome to github actions"
+      - name: welcome
+        run: echo "welcome to devops class"
+          
