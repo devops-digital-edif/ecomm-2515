@@ -44,3 +44,9 @@
 3. Mapping Data Type
     - key-value pairs, separated by colon followed by space
     - ex: name: murali
+
+
+### Folded block 
+ex: 
+jobDescription: "Need 3 years exp person in cloud devops. He/she should be familier with kubernetes and docker. Should be able to lead the scrum team"
+

@@ -1,0 +1,87 @@
+
+# normal String
+
+jobDescription: "Need 3 years exp person in cloud devops. He/she should be familier with kubernetes and docker. Should be able to lead the scrum team"
+
+
+# folded block 
+
+jobDescription1: > 
+  Need 3 years exp person in cloud devops. 
+  He/she should be familier with kubernetes and docker. 
+  Should be able to lead the scrum team.
+
+output:
+  Need 3 years exp person in cloud devops. He/she should be familier with kubernetes and docker. Should be able to lead the scrum team
+
+
+
+# literal block
+
+jobDescription2: | 
+  Need 3 years exp person in cloud devops. 
+  He/she should be familier with kubernetes and docker. 
+  Should be able to lead the scrum team.
+
+output1:
+
+  Need 3 years exp person in cloud devops. 
+  He/she should be familier with kubernetes and docker. 
+  Should be able to lead the scrum team.
+
+---
+
+learners_data:
+  leraner1: 
+    name: murali    # dictionary
+    age: 25         # integer
+    height: 5.8     # floating
+    enrolledCourses:  # list
+      - aws
+      - devops
+      - azure
+    phone_number: null  # null
+    isCourseCompleted: false  # boolean
+    exp:
+      company1: tcs
+      company2: techMahindra
+    profesionalSummery: |
+      worked as cloud devops engg to automate test, build and releases.
+      managed scrum team for better output.
+  learner2:
+    name: krishna
+    age: 25
+    height: 5.8
+    enrolledCourses:
+      - aws
+      - devops
+      - azure
+    phone_number: null
+    isCourseCompleted: false
+    exp:
+      company1: tcs
+      company2: techMahindra
+      name: krish      --> learner2.exp.name
+---
+learners_data:
+  learner2:
+    name: krishna
+    age: 25
+    height: 5.8
+    enrolledCourses:
+      - aws
+      - devops
+      - azure
+    phone_number: null
+    isCourseCompleted: false
+    exp:
+      company1: tcs
+      company2: techMahindra
+      name: krish      --> learner2.exp.name
+
+
+installNginx: |
+  sudo apt update
+  sudo apt install nginx
+  
+  
