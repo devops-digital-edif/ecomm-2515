@@ -2,6 +2,19 @@ name: Scheduled Workflow  # workflow name
 on: 
   schedule:
     - cron: '0 10 * * *' # min hour DOM Mon DoW  --> UTC
+# UTC to IST time conversion
+  # Min: 0 - 59
+  # Hour: 0 - 23
+  # Day of Month: 1 to 31
+  # Month: 1 to 12 or JAN - DEC
+  # Day of Week: 0 - 7 or SUN - SAT --> 0/7 -> SUN
+# IST = 05:30 + UST
+# UST - 04:30AM => IST = 05:30 + 04:30 = 10:00AM
+# IST = 10:10AM ==> UST
+  # 10:10 = 05:30 + UST
+  # UST = 10:10 - 05:30 = 04:40AM
+  # CRON: '40 4 * * *'
+    
 jobs:
   firstJob:    # jon name
     runs-on: ubuntu-latest # windows-latest, macos-latest
