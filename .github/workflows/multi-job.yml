@@ -22,7 +22,7 @@ jobs:
   build:   # converting human readable code to machine readable code
     runs-on: ubuntu-latest
     needs: 
-      - testUbuntu
+ #     - testUbuntu
       - testWin
     if: success()    # if test/previous job executes successfully then only it will run this job
     steps:
