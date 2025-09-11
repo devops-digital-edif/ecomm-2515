@@ -26,3 +26,11 @@ jobs:
         run: echo "deployed in server"
       - name: welcome
         run: sleep 10
+  PublishTestResult:   # sends test results
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Notification
+        run: echo "Test job completed"
+      - name: welcome
+        run: sleep 10
