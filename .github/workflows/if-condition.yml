@@ -8,7 +8,7 @@ jobs:
         run: sleep 10
   testWin:
     needs: testUbuntu
-    if: failled()
+    if: success()
     runs-on: windows-latest
     steps:
       - name: testing on windows
