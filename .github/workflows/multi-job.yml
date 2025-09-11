@@ -33,6 +33,6 @@ jobs:
     needs: test
     steps:
       - name: Notification
-        run: echo "Test job completed"
+        run: echo "Test job completed
       - name: welcome
         run: sleep 10
