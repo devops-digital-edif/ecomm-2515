@@ -9,7 +9,7 @@ jobs:
       - name: test
         run: echo "checking code"
       - name: welcome
-        run: echo "welcome to First-Job"   # manual shell commands
+        run: sleep 10   # manual shell commands
   build:   # converting human readable code to machine readable code
     runs-on: ubuntu-latest
     needs: test
@@ -17,11 +17,12 @@ jobs:
       - name: build
         run: echo "build is done"
       - name: welcome
-        run: echo "welcome to First-Job"
+        run: sleep 10
   deploy:   # deploying artifacts to server
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - name: deploy
         run: echo "deployed in server"
       - name: welcome
-        run: echo "welcome to First-Job"
+        run: sleep 10
