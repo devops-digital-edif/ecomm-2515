@@ -10,3 +10,10 @@ jobs:
         run: echo "welcome to multi job"
       - name: welcome
         run: echo "welcome to First-Job"   # manual shell commands
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: greet
+        run: echo "welcome to multi job"
+      - name: welcome
+        run: echo "welcome to First-Job"
