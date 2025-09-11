@@ -13,37 +13,37 @@ jobs:
   testWin:     # checking code
     runs-on: ubuntu-latest
     needs: testUbuntu
-    if: failed()
+    if: failure()
     steps:
       - name: test
         run: echo "checking code"
   build:   # converting human readable code to machine readable code
     runs-on: ubuntu-latest
-    # needs: 
-    #   - testUbuntu
-    #   - testWin
-    # if: success()    # if test/previous job executes successfully then only it will run this job
+    needs: 
+      - testUbuntu
+      - testWin
+    if: success()    # if test/previous job executes successfully then only it will run this job
     steps:
       - name: build
         run: echo "build is done"
       - name: welcome
         run: sleep 10
-  # deploy:   # deploying artifacts to server
-  #   runs-on: ubuntu-latest
-  #   needs: 
-  #     - build
-  #     - PublishTestResult
-  #   if: always()
-  #   steps:
-  #     - name: deploy
-  #       run: echo "deployed in server"
-  #     - name: welcome
-  #       run: sleep 10
-  # PublishTestResult:   # sends test results
-  #   runs-on: ubuntu-latest
-  #   needs: testUbuntu
-  #   steps:
-  #     - name: Notification
-  #       run: echo "Test job completed"
-  #     - name: welcome
-  #       run: sleep 10
+  deploy:   # deploying artifacts to server
+    runs-on: ubuntu-latest
+    needs: 
+      - build
+      - PublishTestResult
+    if: always()
+    steps:
+      - name: deploy
+        run: echo "deployed in server"
+      - name: welcome
+        run: sleep 10
+  PublishTestResult:   # sends test results
+    runs-on: ubuntu-latest
+    needs: testUbuntu
+    steps:
+      - name: Notification
+        run: echo "Test job completed"
+      - name: welcome
+        run: sleep 10
