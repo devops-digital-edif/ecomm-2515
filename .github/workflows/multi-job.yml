@@ -1,0 +1,12 @@
+name: Multi Job Workflow
+on: 
+ - workflow_dispatch    # manual trigger
+ - push  # on push it will trigger
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: greet
+        run: echo "welcome to multi job"
+      - name: welcome
+        run: echo "welcome to First-Job"   # manual shell commands
