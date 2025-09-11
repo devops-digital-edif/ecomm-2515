@@ -12,6 +12,7 @@ jobs:
         run: echo "welcome to First-Job"   # manual shell commands
   build:   # converting human readable code to machine readable code
     runs-on: ubuntu-latest
+    needs: test
     steps:
       - name: build
         run: echo "build is done"
