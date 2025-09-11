@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test
-        run: echo "checking code"
+        run: echo "checking code
       - name: welcome
         run: sleep 10   # manual shell commands
   testWin:     # checking code
@@ -22,7 +22,7 @@ jobs:
     needs: 
       - testUbuntu
       - testWin
-    if: success()    # if test/previous job executes successfully then only it will run this job
+    if: always()    # if test/previous job executes successfully then only it will run this job
     steps:
       - name: build
         run: echo "build is done"
