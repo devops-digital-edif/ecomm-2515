@@ -8,3 +8,9 @@ jobs:
         run: echo "welcome to ubuntu"
       - name: Server Operating
         run: cat /etc/os-release
+      - name: Memory and Storage
+        run: |
+          free -m
+          free -h
+          df -h
+          lscpu
