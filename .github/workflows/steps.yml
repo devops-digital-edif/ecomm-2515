@@ -1,0 +1,10 @@
+name: Steps Demo
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: greet
+        run: echo "welcome to ubuntu"
+      - name: Server Operating
+        run: cat /etc/os-release
