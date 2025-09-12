@@ -1,5 +1,11 @@
 name: Steps Demo
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      env:
+        type: string
+        required: true
+
 jobs:
   job1:
     runs-on: ubuntu-latest
