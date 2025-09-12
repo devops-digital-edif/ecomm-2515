@@ -7,6 +7,7 @@ jobs:
       - name: greet
         run: echo "welcome to ubuntu
       - name: Server Operating
+        if: failure()
         run: cat /etc/os-release
       - name: Memory and Storage
         run: |
