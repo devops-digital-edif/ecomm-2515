@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: greet
-        run: echo "welcome to ubuntu
+        run: echo "welcome to ubuntu"
       - name: Server Operating
         if: failure()
         run: cat /etc/os-release
