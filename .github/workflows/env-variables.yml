@@ -5,10 +5,17 @@ env:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      WELCOME: "Welcome to"    # Job specific vaiable, can be used in this job only
     steps:
       - name: Welcome to Edify
         run: echo "Hello World, Welcome to Edify"
       - name: Welcome to Github Actions
-        run: echo "$GREET, Welcome to Github Actions"
+        run: echo "$GREET, $WELCOME Github Actions"
       - name: Welcome to Env Var
-        run: echo "$GREET, Welcome to Env Variables Class"
+        run: echo "$GREET, $WELCOME Env Variables Class"
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome to Deploy
+        run: echo "$GREET, $WELCOME Deploy"    
