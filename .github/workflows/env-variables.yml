@@ -26,6 +26,15 @@ jobs:
         run: echo "$GREET, $WELCOME Deploy" 
       - name: Deploy Number
         run: echo "This is $GITHUB_RUN_NUMBER Deploy"
+  build:
+    runs-on: ubuntu-latest
+    env:
+      WELCOME: "Welcome to dev"
+    steps:
+      - env:
+          DEP_ENV: "Dev Env"
+        name: Welcome to Deploy
+        run: echo " deploying to $DEP_ENV"
 
 
 
