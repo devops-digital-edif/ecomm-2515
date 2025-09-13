@@ -10,3 +10,5 @@ jobs:
         run: echo "${{vars.GREET}}, Welcome to Edify"
       - name: Deploy Number
         run: echo "This is $GITHUB_RUN_NUMBER Deploy"
+      - name: Connect to Database
+        run: echo "by using this password  ${{secrets.PASSWORD}} connect Database"
