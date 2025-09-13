@@ -1,0 +1,14 @@
+name: Env Variable
+on: workflow_dispatch
+env:       
+  GREET: "Hello World"   # GLobal Variable
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Welcome to Edify
+        run: echo "Hello World, Welcome to Edify"
+      - name: Welcome to Github Actions
+        run: echo "$GREET, Welcome to Github Actions"
+      - name: Welcome to Env Var
+        run: echo "$GREET, Welcome to Env Variables Class"
