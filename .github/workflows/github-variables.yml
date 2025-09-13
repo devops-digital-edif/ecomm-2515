@@ -1,0 +1,10 @@
+name: Github Variable
+on: workflow_dispatch
+jobs:
+  test:
+    runs-on: ubuntu-latest  # brand new server for each job
+    env:
+      WELCOME: "Welcome to"    # Job specific vaiable, can be used in this job only
+    steps:
+      - name: Welcome to Edify
+        run: echo "$GREET, Welcome to Edify"
