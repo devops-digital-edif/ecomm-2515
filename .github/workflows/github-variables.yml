@@ -8,3 +8,5 @@ jobs:
     steps:
       - name: Welcome to Edify
         run: echo "$GREET, Welcome to Edify"
+      - name: Deploy Number
+        run: echo "This is $GITHUB_RUN_NUMBER Deploy"
