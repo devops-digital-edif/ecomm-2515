@@ -16,6 +16,8 @@ jobs:
         run: echo "$GREET, $WELCOME Env Variables Class"
   deploy:
     runs-on: ubuntu-latest
+    env:
+      WELCOME: "Welcome to dev"
     steps:
       - name: Welcome to Deploy
         run: echo "$GREET, $WELCOME Deploy"    
