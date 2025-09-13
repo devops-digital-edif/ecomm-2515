@@ -7,6 +7,6 @@ jobs:
       WELCOME: "Welcome to"    # Job specific vaiable, can be used in this job only
     steps:
       - name: Welcome to Edify
-        run: echo "$GREET, Welcome to Edify"
+        run: echo "${{vars.GREET}}, Welcome to Edify"
       - name: Deploy Number
         run: echo "This is $GITHUB_RUN_NUMBER Deploy"
