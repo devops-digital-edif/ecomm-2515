@@ -11,9 +11,12 @@ jobs:
       - name: Welcome to Edify
         run: echo "Hello World, Welcome to Edify"
       - name: Welcome to Github Actions
-        run: echo "$GREET, $WELCOME Github Actions"
+        run: echo "$GREET, $WELCOME $GA"  # Hello World, Welcome to Github Actions
+        env: 
+          GA: "Github Actions"    # Step specific variable, can be used inthis step only
       - name: Welcome to Env Var
-        run: echo "$GREET, $WELCOME Env Variables Class"
+        run: echo "$GREET, $WELCOME $GA  Env Variables Class"
+        # Hello World, Welcome to Github Actions Env Variables Class
   deploy:
     runs-on: ubuntu-latest
     env:
