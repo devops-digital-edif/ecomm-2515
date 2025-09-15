@@ -9,8 +9,9 @@ jobs:
       - name: Create Directory
         run: |
           cd
-        #  mkdir github-hosted
           ls
+        # mkdir github-hosted
+         
   job2:
     runs-on: self-hosted   # using self hosted runner
     steps:
@@ -19,5 +20,6 @@ jobs:
       - name: Installed Softwares
         run: |
           cd
+          ls
         # mkdir self-hosted
-          ls 
+          
