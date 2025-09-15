@@ -1,0 +1,13 @@
+name: Runners Demo
+on: workflow_dispatch
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: OS Info
+        run: cat /etc/os-release
+  job2:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Ubuntu OS Info
+        run: cat /etc/os-release
