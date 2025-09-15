@@ -10,10 +10,12 @@ jobs:
         run: |
           java --version
           node -v
-          python3 version
-          docker version
   job2:
-    runs-on: ubuntu-22.04
+    runs-on: self-hosted   # using self hosted runner
     steps:
       - name: Ubuntu OS Info
         run: cat /etc/os-release
+      - name: Installed Softwares
+        run: |
+          java --version
+          node -v
