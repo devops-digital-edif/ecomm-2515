@@ -1,0 +1,12 @@
+name: Ecomm Deployment
+on:
+ - push    # push based/ automatic trigger
+ - workflow_dispatch   # manual trigger
+jobs:
+  deploy:
+    runs-on: self-hosted
+    steps:
+      - name: Clone the Code
+        uses: actions/checkout@v5.0.0
+      - name: Install Nginx
+        run: sudo apt install nginx -y
