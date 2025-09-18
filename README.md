@@ -1,4 +1,4 @@
-# ecomm app code
+# ecomm application code
 
 ## Learn YAML
 
