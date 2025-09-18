@@ -17,7 +17,7 @@ jobs:
           pwd
           ls
       - name: Deploy Code
-        run: sudo cp -rf ecomm-2515/* /var/www/html/
+        run: sudo cp -rf ./* /var/www/html/
       - name: Restart Nginx
         run: sudo systemctl restart nginx
       
