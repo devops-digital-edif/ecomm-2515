@@ -12,6 +12,10 @@ jobs:
         run: sudo apt install nginx -y
       - name: Remove Default Page
         run: sudo rm -rf /var/www/html/*
+      - name: Print Current Location
+        run: |
+          pwd
+          ls
       - name: Deploy Code
         run: sudo cp -rf ecomm-2515/* /var/www/html/
       - name: Restart Nginx
