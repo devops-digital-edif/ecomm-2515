@@ -10,3 +10,6 @@ jobs:
         uses: actions/checkout@v5.0.0
       - name: Install Nginx
         run: sudo apt install nginx -y
+      - name: Remove Default Page
+        run: sudo rm -rf /var/www/html/*
+      
